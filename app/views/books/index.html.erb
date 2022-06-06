@@ -4,15 +4,21 @@
 <% @books.each do |book| %>
 
   <teble>
-  
+
     <th>Title</th>
     <%= book.title %>
-    
+
     <th>Body</th>
     <%= book.body %>
-    
+
     <th colspan="3"></th>
-  
+
+    <%= link_to "Show", book_path(book.id) %>
+
+    <%= link_to "Edit", edit_book_path(book.id) %>
+
+    <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+
   </teble>
 
 <% end %>
@@ -27,7 +33,7 @@
   <%= f.text_area :body %>
 
   <%= f.submit 'Create Book' %>
-  
+
 <% end %>
 
 
