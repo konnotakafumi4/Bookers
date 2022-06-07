@@ -25,3 +25,24 @@
  p {
    margin: 33px;
  }
+
+ a:link {
+  color: #000;
+ }
+
+ a:visited {
+   color: #666;
+ }
+
+ a:hover {
+  color: #fff;
+  background-color: #000;
+ }
+
+ label {
+  display: block;
+ }
+
+ .field, .actions {
+  margin-bottom: 10px;
+ }
